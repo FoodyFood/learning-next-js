@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 
-function FoodyFood({ Component, pageProps }) {
+function foodyfood({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default FoodyFood
+export default foodyfood

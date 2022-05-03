@@ -1,8 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Footer from "../components/Footer.js";
+import Link from 'next/link'
+
+import styles from '../styles/Common.module.css'
+import {Head_, Space, Footer} from "../components/Common.js"
+
 
 export default function Home() {
   return (
@@ -11,25 +13,20 @@ export default function Home() {
         <Head_ />
       </Head>
       <Space/>
+
       <Header />
       <Space/>
-      <CookiecutterLogo />
-      <Main />
-      <Footer />
 
+      <CookiecutterLogo />
+
+      <Main />
+
+      <Footer />
     </div>
   )
 }
 
-function Head_() {
-  return (
-    <>
-      <title>FoodyFood</title>
-      <meta name="description" content="FoodyFood" />
-      <link rel="icon" href="/favicon.ico" />
-    </>
-  )
-}
+
 
 function Header() {
   return(
@@ -55,40 +52,11 @@ function CookiecutterLogo(props) {
 function Main() {
   return(
     <main className={styles.main}>
-    <CardStack />
-    </main>
-  )
-}
-
-function CardStack() {
-  return(
-    <div className={styles.grid}>
-      <Card title="Home" link="/index" description="The Homepage"/>
-      <Card title="Contact" link="/contact" description="Where To Get In Touch"/>
-      <Card title="About Us" link="/aboutus" description="Where Are We Who Are We"/>
-      <Card title="Deploy" link="/deploy" description="Deploy Our Solution"/>
-      <Card title="Code" link="/code" description="The Code That Powers This"/>
-    </div>
-  )
-}
-
-function Card(props) {
-  return(
-      <Link href={props.link}>
-        <a className={styles.card}>
-          <h2>{props.title}&rarr;</h2>
-          <p>{props.description}</p>
+      <Link href="/dashboard">
+        <a>
+          <h2>Dashboard&rarr;</h2>
         </a>
       </Link>
-  )
-}
-
-
-function Space() {
-  return(
-    <>
-      <br />
-      <br />
-    </>
+    </main>
   )
 }
