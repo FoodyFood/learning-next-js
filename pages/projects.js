@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 import styles from '../styles/Common.module.css'
 import {Head_, Header, Space, Footer} from "../components/Common.js"
-import Picture from "../components/Picture.js"
 
-const pictures=["1", "2", "3"]
+
+const pictures=["image1", "image2", "image3"]
 
 export default function Projects() {
     return (
@@ -24,11 +24,13 @@ export default function Projects() {
                     </a>
                 </Link>
 
-                <Picture image={"./projects/project01/" + pictures[0] + ".jpg"} size="600"/>
-                <Space />
-                <Picture image={"./projects/project01/" + pictures[0] + ".jpg"} size="600"/>
-                <Space />
-                <Picture image={"./projects/project01/" + pictures[0] + ".jpg"} size="600"/>
+                
+                <Link href="/projects/project01">
+                    <a>
+                        <h2>Fume Hood&rarr;</h2>
+                    </a>
+                </Link>
+
             </main>
 
             <Footer />
