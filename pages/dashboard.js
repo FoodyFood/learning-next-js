@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import styles from '../styles/Common.module.css'
-import {Footer, Space, Head_} from "../components/Common.js"
-import Card from "../components/Card.js"
+import {Head_, Header, Space, Footer} from "../components/Common.js"
+import {Card} from "../components/Card.js"
 
 
-export default function Contact() {
+export default function Dashboard() {
     return (
         <div className={styles.container}>
             <Head>
@@ -13,9 +14,15 @@ export default function Contact() {
             </Head>
             <Space />
 
-            <Header />
+            <Header title="Dashboard" />
             
             <main className={styles.main}>
+                <Link href="/">
+                    <a>
+                        <h2>Home&rarr;</h2>
+                    </a>
+                </Link>
+
                 <CardStack />
             </main>
 
@@ -24,13 +31,6 @@ export default function Contact() {
     )
 }
 
-function Header() {
-    return(
-        <h1 className={styles.title}>
-            Dashboard
-        </h1>
-    )
-}
 
 function CardStack() {
     return(

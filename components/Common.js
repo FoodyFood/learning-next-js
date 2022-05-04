@@ -12,6 +12,15 @@ export function Head_() {
 }
 
 
+export function Header(props) {
+  return(
+    <h1 className={styles.title}>
+      {props.title}
+    </h1>
+  )
+}
+
+
 export function Space() {
   return(
     <>

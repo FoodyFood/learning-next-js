@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from '../styles/Common.module.css'
-import {Head_, Space, Footer} from "../components/Common.js"
+import {Head_, Header, Space, Footer} from "../components/Common.js"
+import Picture from "../components/Picture.js"
 
 
 export default function Home() {
@@ -14,10 +15,10 @@ export default function Home() {
       </Head>
       <Space/>
 
-      <Header />
+      <Header title="Welcome to FoodyFood's Hub"/>
       <Space/>
 
-      <CookiecutterLogo />
+      <Picture image="cookiecutter-logo.jpeg" size="300" />
 
       <Main />
 
@@ -27,34 +28,17 @@ export default function Home() {
 }
 
 
-
-function Header() {
-  return(
-    <h1 className={styles.title}>
-      Welcome to FoodyFood's Hub
-    </h1>
-  )
-}
-
-function CookiecutterLogo(props) {
-  return(
-    <div className={styles.center}>
-      <Image
-        src="/images/cookiecutter-logo.jpeg" // Route of the image file
-        height={300} // Desired size with correct aspect ratio
-        width={300} // Desired size with correct aspect ratio
-        alt="Cookiecutter Logo"
-      />
-    </div>
-  )
-}
-
 function Main() {
   return(
     <main className={styles.main}>
       <Link href="/dashboard">
         <a>
           <h2>Dashboard&rarr;</h2>
+        </a>
+      </Link>
+      <Link href="/projects">
+        <a>
+          <h2>Projects&rarr;</h2>
         </a>
       </Link>
     </main>
