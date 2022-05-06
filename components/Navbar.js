@@ -16,12 +16,24 @@ function MobileNav({open, setOpen}) {
     return (
         <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-                <a className="text-xl font-semibold" href="/">LOGO</a>
+                <Link href="/">
+                    <a className="text-xl font-semibold">FoodyFood</a>
+                </Link>
             </div>
             <div className="flex flex-col ml-4">
                 <Link href="/">
                     <a className="text-xl font-medium my-4" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                         Home
+                    </a>
+                </Link>
+                <Link href="/dashboard">
+                    <a className="text-xl font-medium my-4" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                        Dashboard
+                    </a>
+                </Link>
+                <Link href="/projects">
+                    <a className="text-xl font-medium my-4" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                        Projects
                     </a>
                 </Link>
             </div>  
@@ -36,7 +48,9 @@ export default function Navbar() {
         <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
-                <a className="text-2xl font-semibold" href="/">LOGO</a>
+                <Link href="/">
+                    <a className="text-2xl font-semibold">FoodyFood</a>
+                </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 
@@ -52,7 +66,13 @@ export default function Navbar() {
                 <div className="hidden md:flex">
 
                     <NavLink to="/">
-                        HOME
+                        Home
+                    </NavLink>
+                    <NavLink to="/dashboard">
+                        Dashboard
+                    </NavLink>
+                    <NavLink to="/projects">
+                        Projects
                     </NavLink>
                 </div>
             </div>

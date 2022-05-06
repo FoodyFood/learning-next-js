@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 // Components
 import Title from "../../components/Title.js"
+import Blurb from "../../components/Blurb.js"
 import Picture from "../../components/Picture.js"
 
 // Styles
@@ -15,11 +16,13 @@ export default function Project01() {
     return (
         <div className={styles.container}>
             <Title title="Fume Hood" />
+
+            <Blurb text="This is a fume hood I built for my home lab" />
             
             <main className={styles.main}>
-                <Picture image={"./projects/project01/" + pictures[0] + ".jpg"} size="600"/>
-                <Picture image={"./projects/project01/" + pictures[1] + ".jpg"} size="600"/>
-                <Picture image={"./projects/project01/" + pictures[2] + ".jpg"} size="600"/>
+                <Picture image={"/projects/project01/" + pictures[0] + ".jpg"} size="600"/>
+                <Picture image={"/projects/project01/" + pictures[1] + ".jpg"} size="600"/>
+                <Picture image={"/projects/project01/" + pictures[2] + ".jpg"} size="600"/>
             </main>
         </div>
     )
