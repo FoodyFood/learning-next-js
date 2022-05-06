@@ -1,28 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
+// Next.js Imports
 import Link from 'next/link'
 
-import styles from '../styles/Common.module.css'
-import {Head_, Header, Space, Footer} from "../components/Common.js"
+// Components
 import Picture from "../components/Picture.js"
+
+// Styles
+import styles from '../styles/Common.module.css'
 
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <Head_ />
-      </Head>
-      <Space/>
-
-      <Header title="Welcome to FoodyFood's Hub"/>
-      <Space/>
 
       <Picture image="cookiecutter-logo.jpeg" size="300" />
 
       <Main />
-
-      <Footer />
     </div>
   )
 }

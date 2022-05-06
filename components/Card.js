@@ -1,8 +1,10 @@
-import styles from '../styles/Common.module.css'
+// Next.js Imports
 import Link from 'next/link'
 
+// Styles
+import styles from '../styles/Common.module.css'
 
-export function Card(props) {
+export default function Card(props) {
   return(
       <Link href={props.link}>
         <a className={styles.card}>
